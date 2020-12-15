@@ -39,6 +39,7 @@
         width: 100%;
         float: left;
         margin-top: 6rem;
+				margin-bottom: 6rem;
         font-size: 26px;
         text-align: center;
       }

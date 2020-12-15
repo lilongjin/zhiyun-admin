@@ -115,9 +115,7 @@
   @import "../../../static/less/main.less";
   .banner_list {
     width: 100%;
-    height: 100%;
     float: left;
-    overflow-y: scroll;
     position: relative;
     .banner_list_header{
       width: 100%;

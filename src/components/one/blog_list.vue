@@ -6,15 +6,17 @@
         <p>发布时间</p>
         <p>操作</p>
       </div>
-      <div class="blog" v-for="item in content_list_data.content_list">
-        <p>{{item.title}}</p>
-        <p>{{item.author.username}}</p>
-        <p>{{item.addtime | formatDate('yyyy-MM-dd hh:mm:ss')}}</p>
-        <p>
-          <span @click="detail(item._id)">查看详情</span>
-          <span @click="deletes(item._id)">删除</span>
-        </p>
-      </div>
+	  <div class="blog_box">
+		  <div class="blog" v-for="item in content_list_data.content_list">
+		    <p>{{item.title}}</p>
+		    <p>{{item.author.username}}</p>
+		    <p>{{item.addtime | formatDate('yyyy-MM-dd hh:mm:ss')}}</p>
+		    <p>
+		      <span @click="detail(item._id)">查看详情</span>
+		      <span @click="deletes(item._id)">删除</span>
+		    </p>
+		  </div>
+	  </div>
       <el-pagination
         background
         layout="prev, pager, next"
@@ -25,7 +27,7 @@
         @current-change="jump_page"
         @prev-click="prev_page()"
         @next-click="next_page()"
-        style="position: absolute ;width: auto;left: 35%;bottom: 2rem">
+        style="float: left;margin-left: 35%;margin-top: 1rem;">
       </el-pagination>
     </div>
 </template>
@@ -117,11 +119,10 @@
   @import "../../../static/less/main.less";
   .blog_list {
     width: 100%;
-    height: 100%;
     float: left;
-    position: relative;
     .blog_list_header{
       width: 100%;
+			height: 3rem;
       float: left;
       border-bottom: 1px solid @color_bg;
       p{
@@ -133,35 +134,40 @@
         text-indent:1rem;
       }
     }
-    .blog{
-      width: 100%;
-      float: left;
-      border-bottom: 1px solid @color_bg;
-      cursor: pointer;
-      &:hover{
-        color: @color_lan;
-      }
-      p{
-        width: 25%;
-        float: left;
-        height: 3rem;
-        line-height: 3rem;
-        text-align: left;
-        text-indent: 1rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-      p:last-child{
-        font-size: 12px;
-        span:nth-child(1){
-          color: green;
-          padding-right: .5rem;
-        }
-        span:nth-child(2){
-          color: red;
-        }
-      }
-    }
+	.blog_box{
+		width: 100%;
+		float: left;
+		.blog{
+		  width: 100%;
+		  float: left;
+		  border-bottom: 1px solid @color_bg;
+		  cursor: pointer;
+		  &:hover{
+		    color: @color_lan;
+		  }
+		  p{
+		    width: 25%;
+		    float: left;
+		    height: 3rem;
+		    line-height: 3rem;
+		    text-align: left;
+		    text-indent: 1rem;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		  }
+		  p:last-child{
+		    font-size: 12px;
+		    span:nth-child(1){
+		      color: green;
+		      padding-right: .5rem;
+		    }
+		    span:nth-child(2){
+		      color: red;
+		    }
+		  }
+		}
+	}
+    
   }
 </style>

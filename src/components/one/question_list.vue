@@ -25,7 +25,7 @@
       @current-change="jump_page"
       @prev-click="prev_page()"
       @next-click="next_page()"
-      style="position: absolute ;width: auto;left: 35%;bottom: 2rem">
+      style="float: left;margin-left: 35%;margin-top: 1rem;">
     </el-pagination>
   </div>
 </template>
@@ -117,11 +117,10 @@
   @import "../../../static/less/main.less";
   .blog_list {
     width: 100%;
-    height: 100%;
     float: left;
-    position: relative;
     .blog_list_header{
       width: 100%;
+	  height: 3rem;
       float: left;
       border-bottom: 1px solid @color_bg;
       p{

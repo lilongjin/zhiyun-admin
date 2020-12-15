@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header" v-if="admin_msg !=''">
-      <div class="user_msg">智云社区后台管理系统</div>
+      <div class="user_msg" @click="jump('index_content','后台首页','0')">智云社区后台管理系统</div>
       <div class="admin_login">
         <p @click="admin_quit()"><span class="el-icon-switch-button"></span>退出</p>
         <p><span class="el-icon-refresh"></span><a href="http://zhiyun.lilongjin.cn">切换至前台</a></p>
@@ -208,13 +208,12 @@
     top:4rem;
     bottom: 0;
     right: 0;
+	background-color: #f5f6f7;
     .left{
-      width: 12%;
+      width: 15%;
       height: 100%;
       float: left;
-      box-sizing: border-box;
-      background-color: #f5f6f7;
-      border-right:1px solid #f5f6f7;
+	  background-color: #353D44;
       .admin_msg{
         width: 100%;
         float: left;
@@ -228,7 +227,7 @@
         p{
           width: 100%;
           text-align: center;
-          color: @color_title;
+          color: #ffffff;
           line-height: 3rem;
           float: left;
           font-size: .8rem;
@@ -254,30 +253,32 @@
           float: left;
           font-size: 1rem;
           text-indent: 1rem;
-          color: @color_title;
+          color: #ffffff;
           cursor: pointer;
+		  box-sizing: border-box;
+		  border-bottom: 1px solid #353D44;
           &:hover{
-            color: @color_lan;
+            background-color: #2C3138;
           }
           span{
             padding-right: .5rem;
           }
         }
         .ac{
-          background-color: white;
-          color: @color_lan;
+          background-color: #2C3138;
         }
       }
     }
     .right{
-      width: 88%;
+      width: 85%;
       height: 100%;
       float: left;
-      background-color: white;
+	  overflow-y: auto;
       .admin_content{
-        width: 100%;
-        height: 100%;
+        width: 98%;
         float: left;
+		margin: 1%;
+		
         .content_header{
           width: 100%;
           float: left;
@@ -287,12 +288,17 @@
           cursor: pointer;
           font-size: 1rem;
           text-indent: 1rem;
-          border-bottom: 1px solid #f5f6f7;
+		  background-color: white;
+		  font-weight: 600;
+		  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
         }
         .content_view{
-          width: 100%;
-          height: 100%-4rem;
+          width: 98%;
           float: left;
+		  margin-top: 1%;
+		  padding: 1%;
+		  background-color: white;
+		  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
         }
       }
     }
@@ -307,15 +313,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 999;
+	overflow-y: auto;
     .login_box {
-      width:22%;
-      background-color: rgba(255,255,255,.8);
-      float:left;
-      margin-left: 39%;
-      margin-top: 10rem;
-      border-radius: 5px;
-      padding-top: 2rem;
-      padding-bottom: 5rem;
+          width: 30%;
+          background-color: rgba(255, 255, 255, 0.8);
+          float: left;
+          margin-left: 35%;
+          margin-top: 5%;
+          border-radius: 5px;
+          padding-top: 2rem;
+          padding-bottom: 3rem;
       img{
         width: 40%;
         float: left;

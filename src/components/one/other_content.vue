@@ -191,8 +191,6 @@
   .other_content{
     width: 100%;
     float: left;
-    height: 100%;
-    overflow-y: scroll;
     .notice{
       width: 100%;
       float: left;
