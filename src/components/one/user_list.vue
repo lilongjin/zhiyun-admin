@@ -5,28 +5,37 @@
                 style="width: 100%">
             <el-table-column
                     label="用户ID"
-                    prop="_id">
+                    prop="_id"
+					align="center"
+					min-width="25%">
             </el-table-column>
             <el-table-column
                     label="注册时间"
-                    prop="time">
+                    prop="time"
+					align="center"
+					min-width="15%">
             </el-table-column>
             <el-table-column
                     label="用户名"
-                    prop="username">
+                    prop="username"
+					align="center"
+					min-width="20%">
             </el-table-column>
             <el-table-column
                     label="用户类型"
-                    prop="type">
+                    prop="type"
+					align="center"
+					min-width="10%">
             </el-table-column>
             <el-table-column
-                    align="right">
-                <template slot="header" slot-scope="scope">
+                    align="right"
+					min-width="30%">
+                <!-- <template slot="header" slot-scope="scope">
                     <el-input
                             v-model="search"
                             size="mini"
                             placeholder="输入关键字搜索"/>
-                </template>
+                </template> -->
                 <template slot-scope="scope" v-if="admin_msg.SuperAdmin">
                     <el-button
                             size="mini"

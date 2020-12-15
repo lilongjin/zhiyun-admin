@@ -17,6 +17,7 @@
 		    </p>
 		  </div>
 	  </div>
+	  <div v-if="content_list_data.content_list.length == 0" style="line-height: 3rem;text-align: center;">暂无数据！</div>
       <el-pagination
         background
         layout="prev, pager, next"
@@ -27,7 +28,8 @@
         @current-change="jump_page"
         @prev-click="prev_page()"
         @next-click="next_page()"
-        style="float: left;margin-left: 35%;margin-top: 1rem;">
+        style="float: left;margin-left: 35%;margin-top: 1rem;"
+		 v-if="content_list_data.content_list.length != 0">
       </el-pagination>
     </div>
 </template>

@@ -314,7 +314,6 @@
       width: 100%;
       float: left;
       padding-bottom: 2rem;
-      border-bottom: 1px solid #f5f6f7;
       .footer_header{
         width: 100%;
         float: left;

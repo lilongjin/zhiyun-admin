@@ -6,7 +6,7 @@
       <p>发布时间</p>
       <p>操作</p>
     </div>
-    <div class="blog" v-for="item in content_list_data.content_list">
+    <div class="blog" v-for="item in content_list_data.content_list" >
       <p>{{item.title}}</p>
       <p>{{item.author.username}}</p>
       <p>{{item.addtime | formatDate('yyyy-MM-dd hh:mm:ss')}}</p>
@@ -15,6 +15,7 @@
         <span @click="deletes(item._id)">删除</span>
       </p>
     </div>
+		<div v-if="content_list_data.content_list.length == 0" style="line-height: 3rem;text-align: center;">暂无数据！</div>
     <el-pagination
       background
       layout="prev, pager, next"
@@ -25,7 +26,9 @@
       @current-change="jump_page"
       @prev-click="prev_page()"
       @next-click="next_page()"
-      style="float: left;margin-left: 35%;margin-top: 1rem;">
+      style="float: left;margin-left: 35%;margin-top: 1rem;"
+	  v-if="content_list_data.content_list.length != 0"
+	  >
     </el-pagination>
   </div>
 </template>

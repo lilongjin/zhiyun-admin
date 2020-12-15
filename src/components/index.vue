@@ -43,7 +43,7 @@
         </div>
         <div>
           <p><span class="el-icon-lock"></span>密码</p>
-          <input type="text" v-model="login_password" placeholder="密码">
+          <input type="password" v-model="login_password" placeholder="密码">
         </div>
         <div class="login_btn" @click="admin_login()">登录</div>
       </div>
@@ -173,6 +173,7 @@
 
   .header {
     width: 100%;
+	min-width: 1200px;
     float: left;
     background-color: @color_lan;
     height: 4rem;
@@ -208,7 +209,7 @@
     top:4rem;
     bottom: 0;
     right: 0;
-	background-color: #f5f6f7;
+	min-width: 1200px;
     .left{
       width: 15%;
       height: 100%;
